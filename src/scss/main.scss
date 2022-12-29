@@ -8,7 +8,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
-
 @import "~bootstrap/scss/utilities";
 
 // Layout & components
@@ -47,15 +46,26 @@
 // Helpers
 @import "~bootstrap/scss/helpers";
 
+// Bootstrap icons
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
 // Utilities
 @import "~bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
+// Custom Helpers
+@import "helpers/mixins";
+
 // Base
 @import "base/text";
+@import "base/icons";
 
 // Pages
-@import "pages/app";
+@import "pages/earthquakes";
 
 // Components
 @import "components/main";
+@import "components/modal";
+@import "components/earthquake-header";
+@import "components/earthquake-table";
+@import "components/earthquake-details";

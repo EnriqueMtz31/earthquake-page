@@ -1,0 +1,8 @@
+.page--earthquakes {
+  .earthquake-hero {
+    width: 100%;
+    .horizontal-separator {
+      @include horizontal-separator(100%);
+    }
+  }
+}

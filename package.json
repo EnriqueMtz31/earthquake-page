@@ -7,12 +7,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "vitest": "vitest watch --reporter verbose"
+    "vitest": "vitest watch --config ./vitest.config.ts --reporter verbose"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "@reduxjs/toolkit": "^1.9.1",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "date-fns": "^2.29.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
