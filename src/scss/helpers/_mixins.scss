@@ -1,0 +1,5 @@
+@mixin horizontal-separator($wdth) {
+  border-top: 3px solid $secondary;
+  height: 1px;
+  width: $wdth;
+}

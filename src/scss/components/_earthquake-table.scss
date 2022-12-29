@@ -1,0 +1,32 @@
+.page--earthquakes {
+  .earthquake-card {
+    box-shadow: $box-shadow;
+    border: 2px solid $primary;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: $box-shadow-sm;
+      background-color: $blue-400;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    &.click {
+      background-color: $blue-300;
+      transition: background-color 0.1s;
+    }
+  }
+
+  .bi {
+    transition: opacity 0.3s, background-color 0.3s;
+    cursor: pointer;
+    margin-left: 0.25em;
+
+    &.click {
+      opacity: 0.4;
+      background-color: $black;
+      transition: opacity 0.3s, background-color 0.3s;
+    }
+  }
+}
