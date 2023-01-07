@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import { skipToken } from "@reduxjs/toolkit/query";
-import { format } from "date-fns";
 import { ReduxState } from "../../interfaces";
 import { useGetEarthquakeQuery } from "../../services";
 import { formatEarthquakeDate } from "../../utils";

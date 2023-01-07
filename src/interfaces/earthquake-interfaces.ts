@@ -25,29 +25,13 @@ export interface ApiEarthquakeDetail {
   id: string;
 }
 
-/**
- "type": "Feature",
-    "properties": {
-        }
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [
-            -150.743,
-            61.6968,
-            57
-        ]
-    },
-    "id": "ak022gl5hsam"
- */
-
 export interface ApiEarthquakeDetailGeometry {
   type: string;
   coordinates: number[];
 }
 
 export interface ApiEarthquakeDetailProperties {
-  mag: 1.7;
+  mag: number;
   place: string;
   time: number;
   updated: number;
@@ -115,11 +99,22 @@ export interface ApiEarthquakeDetailOriginProperties {
   title: string;
   version: string;
   "vertical-error": string;
+  "azimuthal-gap": number;
+  "depth-type": string;
+  "horizontal-error": number;
+  "magnitude-azimuthal-gap": number;
+  "magnitude-error": number;
+  "magnitude-num-stations-used": number;
+  "magnitude-source": string;
+  "minimum-distance": number;
+  "num-stations-used": number;
+  "origin-source": string;
+  "pdl-client-version": string;
 }
 
 export interface ApiEarthquakeDetailOriginPhaseDataContents {
   "contents.xml": ApiEarthquakeDetailOriginPhaseDataContentsContentsXML;
-  "quake.ml": ApiEarthquakeDetailOriginPhaseDataQuakeML;
+  "quakeml.xml": ApiEarthquakeDetailOriginPhaseDataQuakeML;
 }
 
 export interface ApiEarthquakeDetailOriginPhaseDataContentsContentsXML {
@@ -170,10 +165,22 @@ export interface ApiEarthquakeDetailPhaseDataProperties {
   "standard-error": string;
   version: string;
   "vertical-error": string;
+  "azimuthal-gap": number;
+  "depth-type": string;
+  "horizontal-error": number;
+  "magnitude-azimuthal-gap": number;
+  "magnitude-error": number;
+  "magnitude-num-stations-used": number;
+  "magnitude-source": string;
+  "minimum-distance": number;
+  "num-stations-used": number;
+  "origin-source": string;
+  "pdl-client-version": string;
+  title: string;
 }
 
 export interface ApiEarthquakeMetadata {
-  generated: bigint;
+  generated: number;
   url: string;
   title: string;
   api: string;
@@ -193,32 +200,32 @@ export interface ApiEarthquakeFeature {
 }
 
 export interface ApiEarthquakeFeatureProperties {
-  mag: number;
-  place: string;
-  time: number;
-  updated: number;
-  tz: number;
-  url: string;
-  detail: string;
-  felt: number;
-  cdi: number;
-  mmi: number;
-  alert: string;
-  status: string;
-  tsunami: number;
-  sig: number;
-  net: string;
-  code: string;
-  ids: string;
-  sources: string;
-  types: string;
-  nst: number;
-  dmin: number;
-  rms: number;
-  gap: number;
-  magType: string;
-  type: string;
-  title: string;
+  mag: number | null;
+  place: string | null;
+  time: number | null;
+  updated: number | null;
+  tz: number | null;
+  url: string | null;
+  detail: string | null;
+  felt: number | null;
+  cdi: number | null;
+  mmi: number | null;
+  alert: string | null;
+  status: string | null;
+  tsunami: number | null;
+  sig: number | null;
+  net: string | null;
+  code: string | null;
+  ids: string | null;
+  sources: string | null;
+  types: string | null;
+  nst: number | null;
+  dmin: number | null;
+  rms: number | null;
+  gap: number | null;
+  magType: string | null;
+  type: string | null;
+  title: string | null;
 }
 
 export interface EarthquakeTableProps {
