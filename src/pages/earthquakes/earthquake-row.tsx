@@ -1,5 +1,4 @@
 import { useRef, useContext } from "react";
-import { format } from "date-fns";
 import { useDispatch } from "react-redux";
 import { EarthquakeContext, ModalContext } from "../../context/";
 import { EarthquakeRowProps } from "../../interfaces";

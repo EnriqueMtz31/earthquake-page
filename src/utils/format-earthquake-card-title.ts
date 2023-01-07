@@ -1,4 +1,4 @@
-export const formatEarthquakeCardTitle = (title: string): string => {
+export const formatEarthquakeCardTitle = (title: string | null): string => {
   let formattedTitle = "";
 
   if (!title || title?.length == 0) {
